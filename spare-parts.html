@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spare Parts — Ravi Cycle Company</title>
+  <meta name="description" content="Find high-quality spare parts for your bicycle including frames, brakes, wheels, and more.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ravicycles.com/spare-parts.html">
+  <meta property="og:title" content="Spare Parts — Ravi Cycle Company">
+  <meta property="og:description" content="Find high-quality spare parts for your bicycle.">
+  <meta property="og:url" content="https://ravicycles.com/spare-parts.html">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚲</text></svg>">
+  <link rel="stylesheet" href="/src/css/global.css">
+  <link rel="stylesheet" href="/src/css/header.css">
+  <link rel="stylesheet" href="/src/css/footer.css">
+  <link rel="stylesheet" href="/src/css/chatbot.css">
+  <style>
+    .spare-parts-page {
+      padding: var(--space-12) 0 var(--space-20);
+    }
+    .parts-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: var(--space-8);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-sm);
+    }
+    .parts-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: var(--space-2);
+    }
+    .parts-divider {
+      width: 60px;
+      height: 3px;
+      background-color: #E25D3B; /* Reference image accent color */
+      margin-bottom: var(--space-8);
+    }
+    .parts-list {
+      list-style: none;
+      padding: 0;
+    }
+    .parts-item {
+      border-bottom: 1px solid #eee;
+    }
+    .parts-link {
+      display: block;
+      padding: var(--space-4) 0;
+      font-size: 1.1rem;
+      color: #333;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .parts-link:hover {
+      color: var(--color-primary);
+      padding-left: var(--space-2);
+    }
+    /* Specific styling for the active/underlined item from reference */
+    .parts-link.active {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Bicycle Spare Parts",
+    "description": "Find high-quality spare parts for your bicycle including frames, brakes, wheels, and more."
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" id="site-header"></header>
+
+  <main class="spare-parts-page">
+    <div class="container">
+      <div class="parts-container">
+        <h1 class="parts-title">Spare Parts</h1>
+        <div class="parts-divider"></div>
+        
+        <ul class="parts-list" id="parts-list">
+          <li class="parts-item"><a href="#" class="parts-link">Frames & Forks (Suspensions)</a></li>
+          <li class="parts-item"><a href="#" class="parts-link">Brakes</a></li>
+          <li class="parts-item"><a href="#" class="parts-link">Wheels & Rims</a></li>
+          <li class="parts-item"><a href="#" class="parts-link">Tyres & Tubes</a></li>
+          <li class="parts-item"><a href="#" class="parts-link">Bottom Brackets</a></li>
+          <li class="parts-item"><a href="#" class="parts-link">Chain</a></li>
+          <li class="parts-item"><a href="#" class="parts-link">Bicycle Hubs</a></li>
+          <li class="parts-item"><a href="#" class="parts-link active">Pedals, Handle Grips</a></li>
+          <li class="parts-item"><a href="#" class="parts-link">Handlebar, Stems, Headsets</a></li>
+          <li class="parts-item"><a href="#" class="parts-link" style="border-bottom: none;">Saddle, Seat Post, Seat Nuts</a></li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+
+  <script type="module">
+    import { initCommon } from '/src/js/components.js';
+    import { initChatbot } from '/src/js/chatbot.js';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initCommon();
+      initChatbot();
+
+      // Optional: Fetch parts from API to ensure it matches DB
+      /*
+      fetch('/api/spare-parts')
+        .then(res => res.json())
+        .then(parts => {
+          // Dynamic rendering could go here
+        });
+      */
+    });
+  </script>
+</body>
+</html>

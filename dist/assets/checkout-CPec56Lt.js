@@ -1,0 +1,1 @@
+import"./footer-HvQ3RPj_.js";document.addEventListener(`DOMContentLoaded`,()=>{let e=document.querySelectorAll(`.method-btn`);e.forEach(t=>{t.addEventListener(`click`,()=>{e.forEach(e=>e.classList.remove(`active`)),t.classList.add(`active`)})})});

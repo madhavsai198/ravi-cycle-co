@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Disallow checkout and private areas
+Disallow: /checkout.html
+Disallow: /api/
+
+Sitemap: https://ravicycles.com/sitemap.xml

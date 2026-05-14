@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — Ravi Cycle Company</title>
+  <meta name="description" content="Get in touch with Ravi Cycle Company. Visit our stores, call us, or send us a message. We'd love to hear from you!">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚲</text></svg>">
+  <link rel="stylesheet" href="/src/css/global.css">
+  <link rel="stylesheet" href="/src/css/header.css">
+  <link rel="stylesheet" href="/src/css/pages.css">
+  <link rel="stylesheet" href="/src/css/footer.css">
+  <link rel="stylesheet" href="/src/css/chatbot.css">
+  <!-- SEO tags -->
+  <link rel="canonical" href="https://ravicycles.com/contact.html">
+  <meta property="og:title" content="Contact Us — Ravi Cycle Company">
+  <meta property="og:description" content="Get in touch with Ravi Cycle Company. Visit our stores, call us, or send us a message.">
+  <meta property="og:url" content="https://ravicycles.com/contact.html">
+  <meta property="og:type" content="website">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Ravi Cycle Company",
+    "description": "Get in touch with Ravi Cycle Company. Visit our stores, call us, or send us a message."
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" id="site-header"></header>
+
+  <!-- Contact Hero -->
+  <section class="about-hero">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>We'd love to hear from you. Get in touch with our team!</p>
+    </div>
+  </section>
+
+  <main class="contact-page">
+    <div class="container">
+      <div class="contact-layout">
+        <!-- Contact Info -->
+        <div class="contact-info reveal">
+          <h2>Get in Touch</h2>
+          <p>Have a question about our cycles, need help choosing the right one, or want to visit our showroom? We're here to help!</p>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📍</div>
+            <div>
+              <h4>Main Showroom</h4>
+              <p>42, Gandhi Bazaar Main Road,<br>Basavanagudi, Bengaluru 560004</p>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📞</div>
+            <div>
+              <h4>Phone</h4>
+              <p>+91 93939 34151</p>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📧</div>
+            <div>
+              <h4>Email</h4>
+              <p>info@ravicycles.com</p>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">🕐</div>
+            <div>
+              <h4>Working Hours</h4>
+              <p>Mon - Sat: 9AM - 8PM<br>Sunday: 10AM - 6PM</p>
+            </div>
+          </div>
+
+          <div class="contact-map" id="contact-map">
+            <iframe 
+              src="https://www.openstreetmap.org/export/embed.html?bbox=77.56%2C12.93%2C77.58%2C12.95&layer=mapnik"
+              style="width: 100%; height: 100%; border: none;"
+              title="Store Location Map">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-section reveal">
+          <h2>Send us a Message</h2>
+          <form id="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-name">Full Name *</label>
+                <input type="text" id="contact-name" required placeholder="John Doe">
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Email *</label>
+                <input type="email" id="contact-email" required placeholder="john@example.com">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-phone">Phone</label>
+                <input type="tel" id="contact-phone" placeholder="+91 93939 34151">
+              </div>
+              <div class="form-group">
+                <label for="contact-subject">Subject</label>
+                <select id="contact-subject">
+                  <option value="">Select a topic</option>
+                  <option value="product">Product Inquiry</option>
+                  <option value="service">Service & Repair</option>
+                  <option value="order">Order Status</option>
+                  <option value="warranty">Warranty Claim</option>
+                  <option value="feedback">Feedback</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contact-message">Message *</label>
+              <textarea id="contact-message" required placeholder="Tell us how we can help..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Send Message →</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+
+  <script type="module">
+    import { initCommon } from '/src/js/components.js';
+    import { initChatbot } from '/src/js/chatbot.js';
+    
+    document.addEventListener('DOMContentLoaded', () => {
+      initCommon();
+      initChatbot();
+
+      // Contact form
+      const form = document.getElementById('contact-form');
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const name = document.getElementById('contact-name').value;
+          alert(`Thank you ${name}! Your message has been sent. We'll get back to you within 24 hours. 🚲`);
+          form.reset();
+        });
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Store Locator — Ravi Cycle Company</title>
+  <meta name="description" content="Find your nearest Ravi Cycle Company store. We have showrooms across Bengaluru. Search by location and get directions.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚲</text></svg>">
+  <link rel="stylesheet" href="/src/css/global.css">
+  <link rel="stylesheet" href="/src/css/header.css">
+  <link rel="stylesheet" href="/src/css/store-locator.css">
+  <link rel="stylesheet" href="/src/css/footer.css">
+  <link rel="stylesheet" href="/src/css/chatbot.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <!-- SEO tags -->
+  <link rel="canonical" href="https://ravicycles.com/store-locator.html">
+  <meta property="og:title" content="Store Locator — Ravi Cycle Company">
+  <meta property="og:description" content="Find your nearest Ravi Cycle Company store. We have showrooms across Bengaluru. Search by location and get directions.">
+  <meta property="og:url" content="https://ravicycles.com/store-locator.html">
+  <meta property="og:type" content="website">
+</head>
+<body>
+  <header class="site-header" id="site-header"></header>
+
+  <main class="store-locator-page">
+    <div class="container">
+      <div class="store-locator-title">
+        <h1>store locator</h1>
+      </div>
+
+      <!-- Search -->
+      <div class="store-search">
+        <div class="store-search-field">
+          <label>Your location</label>
+          <input type="text" id="store-search-input" placeholder="Enter city or pincode...">
+        </div>
+        <div class="store-search-field">
+          <label>Search radius</label>
+          <select id="search-radius">
+            <option value="10">10 km</option>
+            <option value="25">25 km</option>
+            <option value="50" selected>50 km</option>
+            <option value="100">100 km</option>
+          </select>
+        </div>
+        <div class="store-search-field">
+          <label>Results</label>
+          <select id="results-count">
+            <option value="10">10</option>
+            <option value="25" selected>25</option>
+            <option value="50">50</option>
+          </select>
+        </div>
+        <button class="btn btn-primary" id="store-search-btn">Search</button>
+      </div>
+
+      <!-- Layout -->
+      <div class="store-layout">
+        <div class="store-list" id="store-list"></div>
+        <div class="store-map">
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script type="module" src="/src/js/store-locator-page.js"></script>
+</body>
+</html>

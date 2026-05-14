@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Detail — Ravi Cycle Company</title>
+  <meta name="description" content="View detailed specifications, colors, sizes, and pricing for this bicycle from Ravi Cycle Company.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚲</text></svg>">
+  <link rel="stylesheet" href="/src/css/global.css">
+  <link rel="stylesheet" href="/src/css/header.css">
+  <link rel="stylesheet" href="/src/css/home.css">
+  <link rel="stylesheet" href="/src/css/product-detail.css">
+  <link rel="stylesheet" href="/src/css/footer.css">
+  <link rel="stylesheet" href="/src/css/chatbot.css">
+  <!-- SEO tags -->
+  <link rel="canonical" href="https://ravicycles.com/product-detail.html">
+  <meta property="og:title" content="Product Detail — Ravi Cycle Company">
+  <meta property="og:description" content="View detailed specifications, colors, sizes, and pricing for this bicycle from Ravi Cycle Company.">
+  <meta property="og:url" content="https://ravicycles.com/product-detail.html">
+  <meta property="og:type" content="product">
+</head>
+<body>
+  <header class="site-header" id="site-header"></header>
+
+  <main class="product-detail-page">
+    <div class="container">
+      <div class="breadcrumb" id="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="separator">›</span>
+        <a href="products.html">All Cycles</a>
+        <span class="separator">›</span>
+        <span class="current" id="breadcrumb-product"></span>
+      </div>
+
+      <div class="product-detail-layout" id="product-detail">
+        <!-- Content rendered by JS -->
+      </div>
+    </div>
+  </main>
+
+  <!-- Related Products -->
+  <section class="related-products" id="related-products">
+    <div class="container">
+      <div class="section-title">
+        <h2>You May Also Like</h2>
+        <div class="accent-line"></div>
+      </div>
+      <div class="products-scroll" id="related-grid"></div>
+    </div>
+  </section>
+
+  <footer class="site-footer" id="site-footer"></footer>
+
+  <script type="module" src="/src/js/product-detail-page.js"></script>
+</body>
+</html>

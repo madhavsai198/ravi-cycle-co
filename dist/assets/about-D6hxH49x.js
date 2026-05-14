@@ -1,0 +1,1 @@
+import"./footer-HvQ3RPj_.js";import{r as e,t}from"./chatbot-noqMi_nh.js";/* empty css              */document.addEventListener(`DOMContentLoaded`,()=>{e(),t()});
